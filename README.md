@@ -50,6 +50,7 @@ todo-team-project/
 └── README.md 
 ```
 ㄴ회의진행 , 개발진행으로 디렉구조 변경되고 파일내용 채워질예정
+ㄴcd로 backend,frontend 폴더로 각각 이동후 npm i 명령실행, package.json에 의거해 설치가 진행됨 (이후 패키지 추가시마다 해주면된다.)
 
 ## Programming
 - 반복되는 코드는 작성하지 않는다.
