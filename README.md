@@ -18,12 +18,38 @@
 
 ## Structure
 ```
-my-project/ 
-├── backend/    ← Node.js + Express 
-├── frontend/    ← React + Tailwind CSS 
-├── README.md 
-└── package.json
+todo-team-project/ 
+├── backend/ # Node.js 서버 
+│ ├── node_modules/  #.gitignore로 git에 제외시킴
+│ ├── src/             # 투두 관련 API 라우터를 분리 (임시)
+│ │ ├── index.js       # Express 서버 진입점(entry point)
+│ │ └── routes/        # 투두 관련 API 라우터를 분리 (임시)
+│ │ │ └── todos.js     # 투두 관련 API 라우터를 분리 (임시)
+│ ├── .gitignore        # Git에 올리지 않을 파일 목록
+│ ├── package-lock.json # 프로젝트 이름, 버전, 의존성 정보를 관리
+│ └── package.json      # 프로젝트 이름, 버전, 의존성 정보를 관리
+├── frontend/ # React 앱 
+│ ├── node_modules/  #.gitignore로 git에 제외시킴
+│ ├── public/
+│ │ ├── favicon.ico 
+│ │ └── index.html
+│ ├── src/ 
+│ │ ├── App.css 
+│ │ ├── App.js 
+│ │ ├── index.css 
+│ │ ├── index.js 
+│ │ └── components/ 
+│ │ │ └── TodoItem.js
+│ ├── tailwind.config.js
+│ ├── postcss.config.js
+│ ├── .gitignore
+│ ├── package-lock.json
+│ ├── package.json
+│ └── README.md
+├── .nvmrc
+└── README.md 
 ```
+ㄴ회의진행 , 개발진행으로 디렉구조 변경되고 파일내용 채워질예정
 
 ## Programming
 - 반복되는 코드는 작성하지 않는다.
