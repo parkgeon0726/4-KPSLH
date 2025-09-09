@@ -1,4 +1,4 @@
-import create from 'zustand'
+import {create} from 'zustand'
 import { useState } from 'react'
 
 export const useTodoStore = create(set => ({
