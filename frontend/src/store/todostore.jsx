@@ -1,14 +1,16 @@
-import {create} from 'zustand'
-import { useState } from 'react'
+import create from "zustand";
 
-export const useTodoStore = create(set => ({
-  todos: [],               // 일정 목록
-  toggleDone: id =>
-    set(state => ({
-      todos: state.todos.map(todo =>
-        todo.id === id ? { ...todo, done: !todo.done } : todo
-      )
+let idCounter = 1;
+const useTodoStore = create((set) => ({
+  todos: [],
+  addTodo: ({ text, date }) =>
+    set((state) => ({
+      todos: [...state.todos, { id: idCounter++, text, date, done: false }],
     })),
-  addTodo: todo =>
-    set(state => ({ todos: [...state.todos, todo] }))
-}))
+  toggleTodo: (id) =>
+    set((state) => ({
+      todos: state.todos.map((t) => (t.id === id ? { ...t, done: !t.done } : t)),
+    })),
+}));
+
+export default useTodoStore;
