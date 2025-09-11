@@ -5,10 +5,6 @@
   box-sizing: border-box;
   font-family: inherit;
 }
-.icon{
-  width: 25px;
-  height: 25px;
-}
 /* 컬러 변수 */
 :root {
   --main-color: rgba(255, 243, 176, 0.2);
