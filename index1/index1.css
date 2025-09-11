@@ -8,7 +8,7 @@
 
 /* 컬러 변수 */
 :root {
-  --main-color: #DCC6E0;
+  --main-color: rgba(255, 243, 176, 0.2);
 }
 
 /* 레이아웃 컨테이너 */
@@ -34,7 +34,6 @@
 }
 
 .sidebar-btn {
-  background: #DCC6E0;
   padding: 8px 12px;
   border: none;
   border-radius: 4px;
@@ -42,7 +41,7 @@
 }
 
 .sidebar-btn:hover {
-  
+  opacity: 0.9;
 }
 
 /* 사이드바 섹션 */
@@ -88,12 +87,16 @@
   position: absolute;
   top: 16px;
   right: 16px;
-  background: #DCC6E0;
+  background: rgba(255, 243, 176, 0.2);
   padding: 12px;
   border-radius: 6px;
   text-align: right;
 }
-
+.date-display{
+  font-size: 30px;
+  margin-top: 150px;
+  margin-left: 200px;
+}
 
 /* 반응형 */
 @media (max-width: 768px) {
