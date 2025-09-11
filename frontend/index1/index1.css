@@ -1,0 +1,122 @@
+/* 기본 리셋 및 상속 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+/* 컬러 변수 */
+:root {
+  --main-color: #DCC6E0;
+}
+
+/* 레이아웃 컨테이너 */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* 사이드바 */
+.sidebar {
+  background-color: var(--main-color);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 24px;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-btn {
+  background: #DCC6E0;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sidebar-btn:hover {
+  
+}
+
+/* 사이드바 섹션 */
+.sidebar-section .card {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  margin-top: 8px;
+}
+
+.sidebar-section li {
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* 중앙 메인 */
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-task {
+  background-color: var(--main-color);
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-task:hover {
+  opacity: 0.9;
+}
+
+/* 날씨 박스 */
+.weather {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #DCC6E0;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: right;
+}
+
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .sidebar-top {
+    flex-direction: row;
+  }
+
+  .sidebar-section {
+    display: none;
+  }
+
+  .weather {
+    position: static;
+    margin: 8px auto;
+  }
+}
